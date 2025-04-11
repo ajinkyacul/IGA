@@ -1,0 +1,46 @@
+2:14:38 PM [express] GET /api/user 401 in 2ms
+12:14:39 PM [express] GET /api/user 401 in 1ms
+12:15:02 PM [express] POST /api/login 200 in 640ms :: {"id":2,"username":"ajinkya1","email":"ajinkya.…
+12:15:08 PM [express] GET /api/questions 304 in 137ms :: []
+12:15:08 PM [express] GET /api/domains 304 in 549ms :: []
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+error: terminating connection due to administrator command
+    at Parser.parseErrorMessage (/home/runner/workspace/node_modules/pg-protocol/src/parser.ts:368:69)
+    at Parser.handlePacket (/home/runner/workspace/node_modules/pg-protocol/src/parser.ts:187:21)
+    at Parser.parse (/home/runner/workspace/node_modules/pg-protocol/src/parser.ts:102:30)
+    at TLSSocket.<anonymous> (/home/runner/workspace/node_modules/pg-protocol/src/index.ts:7:48)
+    at TLSSocket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23)
+Emitted 'error' event on Client instance at:
+    at Client._handleErrorEvent (/home/runner/workspace/node_modules/pg/lib/client.js:350:10)
+    at Client._handleErrorMessage (/home/runner/workspace/node_modules/pg/lib/client.js:361:12)
+    at Connection.emit (node:events:518:28)
+    at /home/runner/workspace/node_modules/pg/lib/connection.js:116:12
+    at Parser.parse (/home/runner/workspace/node_modules/pg-protocol/src/parser.ts:103:9)
+    at TLSSocket.<anonymous> (/home/runner/workspace/node_modules/pg-protocol/src/index.ts:7:48)
+    [... lines matching original stack trace ...]
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23) {
+  length: 116,
+  severity: 'FATAL',
+  code: '57P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'postgres.c',
+  line: '3289',
+  routine: 'ProcessInterrupts'
+}

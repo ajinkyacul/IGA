@@ -1,0 +1,127 @@
+I want you to build a production-ready, secure web application using Java Spring Boot (for backend) and React (for frontend). The application is a tenant-aware Identity Governance requirement gathering platform that works as follows:
+
+🔐 Authentication & Security
+Implement secure JWT-based login/logout system.
+
+Support role-based access control (Admin, Customer, Consultant).
+
+Passwords should be hashed securely using BCrypt.
+
+Ensure all APIs are protected with proper access tokens and CSRF protection for web forms.
+
+🏢 Tenant Management
+Each customer (tenant) logs in and sees only their company profile.
+
+Admins can create tenants and assign application owners.
+
+Use a multi-tenant architecture (e.g., tenant ID column in shared DB or schema-per-tenant strategy).
+
+🧾 Questionnaire Domains
+Each customer sees a categorized set of IDM-related questions:
+
+Access Reviews
+
+Generic Governance Questions
+
+Application Onboarding
+
+Segregation of Duties (SOD)
+
+AD/Directory Services
+
+These should be:
+
+Stored in a relational DB (PostgreSQL preferred)
+
+Grouped by domain
+
+Managed by admins (CRUD via admin UI)
+
+💬 Question Response Interface
+For each question:
+
+A dedicated chat-style threaded response panel.
+
+Users can:
+
+Post answers, comments, follow-ups.
+
+Upload diagrams, attachments (PDF, PNG, DOCX).
+
+View timeline of messages per question.
+
+Use a WYSIWYG/Markdown editor in the input box.
+
+File storage should support S3-compatible buckets or local for dev.
+
+📧 Email Notifications
+Trigger email notifications to concerned users when:
+
+A question is updated
+
+A response is added
+
+A file is uploaded
+
+Include summary and a deep link to that specific question.
+
+🛠️ Admin Features
+Admins can:
+
+Create/edit/delete questions per domain
+
+Assign questions to specific customers or applications
+
+Configure application owner details (name, email)
+
+View dashboard of tenant progress
+
+📊 Dashboards & UX
+Dashboard for:
+
+Customer: % of answered questions
+
+Admin: overview of all tenants, their progress
+
+Responsive UI using Tailwind CSS + React
+
+Follow modern UI/UX best practices (Material UI, smooth transitions, minimal design)
+
+⚙️ Tech Stack
+Backend: Java 17+, Spring Boot 3+, Spring Security, Spring Data JPA
+
+Frontend: React with Hooks, Tailwind CSS, Axios, JWT handling
+
+Database: PostgreSQL
+
+Email: SMTP or Mailgun integration
+
+File Storage: Local (dev) and S3-compatible (prod)
+
+📁 Deliverables
+Full source code for backend and frontend
+
+Docker support for local development
+
+SQL scripts for DB schema
+
+Postman collection or Swagger UI for API testing
+
+Unit + Integration tests
+
+README with setup instructions
+
+✅ Key Requirements
+All code must be production-quality, clean, and modular.
+
+Code should follow SOLID principles and layered architecture.
+
+No hardcoded credentials or secrets.
+
+Use environment variables and application.yml.
+
+Use exception handling and logging best practices.
+
+Responsive and accessible design for all devices.
+
+Please start building the full application from scratch. Use microservice structure if suitable. Provide complete source code step-by-step, beginning with backend first, then frontend. Once complete, add optional enhancements like OAuth SSO, reporting dashboards, and AI-powered suggestion modules.

@@ -1,0 +1,73 @@
+Authentication and Tenant Handling:
+Secure login functionality (with support for admin and customer roles).
+
+Tenant-wise separation of data (multi-tenancy support).
+
+Company profile display after login.
+
+Questionnaire Management (Admin Panel):
+Admins can create, edit, and delete questionnaires.
+
+Questions are categorized into various IDM-focused domains:
+
+Access Reviews
+
+Generic Governance Questions
+
+Application Onboarding
+
+SOD (Segregation of Duties)
+
+AD & Directory Services
+
+Admins can tag specific application owners and their emails.
+
+Customer Interaction Layer:
+Customers can view domain-specific questions under their tenant.
+
+For each question, a rich chat-like response panel is available:
+
+Customers can post answers, comments, and questions.
+
+Responses can include text, file uploads (e.g., architectural diagrams), links, and images.
+
+Each interaction should maintain a timeline or thread.
+
+Support for Markdown or WYSIWYG editor in the comment box.
+
+Notifications:
+Email notifications triggered when:
+
+A customer updates an answer.
+
+An admin or implementation consultant replies.
+
+Email should contain a summary and a deep link to the question thread.
+
+Collaboration & Visibility:
+Implementation team members can reply back to any thread.
+
+Both customer and internal teams can see full question history per application or domain.
+
+Additional Features:
+Role-based access control.
+
+Search and filter questions based on domain, status, tags, etc.
+
+Dashboard showing completion status per application or domain.
+
+Integration-ready architecture for future plugins like reporting, workflow engines, or AI-based suggestions.
+
+I want the AI to help generate:
+
+A system architecture (backend, frontend, database).
+
+Database schema design for multi-tenancy, chat threads, attachments, and questions.
+
+Sample APIs (Spring Boot RESTful APIs) for login, questionnaire CRUD, thread replies, and notification triggers.
+
+Frontend wireframe layout for both admin and customer views.
+
+Security considerations.
+
+Tech stack recommendations and setup.
